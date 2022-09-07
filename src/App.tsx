@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import './App.css';
 
 function App() {
- const url = "/users";
+ const url = "/api/users";
  const [users, setUsers] = useState([])
   console.log("🚀 ~ file: App.tsx ~ line 9 ~ App ~ users", users)
   useEffect(() => {
