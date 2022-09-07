@@ -1,10 +1,8 @@
 import {useEffect, useState} from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
 
 function App() {
- const url = "/api/users";
+ const url = "/users";
  const [users, setUsers] = useState([])
   console.log("🚀 ~ file: App.tsx ~ line 9 ~ App ~ users", users)
   useEffect(() => {
