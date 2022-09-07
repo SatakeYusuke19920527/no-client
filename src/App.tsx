@@ -4,7 +4,7 @@ import { Counter } from './features/counter/Counter';
 import './App.css';
 
 function App() {
- const url = "https://no-server1.lemonwater-903ac0cc.japaneast.azurecontainerapps.io/api/users";
+ const url = "/api/users";
  const [users, setUsers] = useState([])
   console.log("🚀 ~ file: App.tsx ~ line 9 ~ App ~ users", users)
   useEffect(() => {
