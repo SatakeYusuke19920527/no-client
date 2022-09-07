@@ -1,9 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 
 function App() {
+ const url = "/users";
+ const [users, setUsers] = useState([])
+  console.log("🚀 ~ file: App.tsx ~ line 9 ~ App ~ users", users)
+  useEffect(() => {
+   fetch(url, { method: "GET" })
+     .then((res) => res.json())
+     .then((data) => {
+       setUsers(data);
+     })
+     .catch((err) => {
+       console.log(err);
+       console.log("err");
+     });
+ }, []);
   return (
     <div className="App">
       <header className="App-header">
