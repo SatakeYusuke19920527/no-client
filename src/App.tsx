@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import {useState, useEffect} from 'react'
 import axios from 'axios';
 import './App.css';
 
 function App() {
- const url = "/api/albums";
+ const url = "http://20.88.161.39:8080/cosmos";
  const [users, setUsers] = useState([])
   console.log("🚀 ~ file: App.tsx ~ line 9 ~ App ~ users", users)
   useEffect(() => {
@@ -19,7 +19,7 @@ function App() {
   }, []);
   const getData = async () => {
     try {
-      const result = await axios.get('/api/albums')
+      const result = await axios.get('http://20.88.161.39:8080/cosmos')
       console.log("🚀 ~ file: App.tsx ~ line 23 ~ getData ~ result.data()", result.data)  
     } catch (error) {
       console.log("🚀 ~ file: App.tsx ~ line 26 ~ getData ~ error", error)
